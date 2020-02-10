@@ -28,3 +28,44 @@
 * http://ip.syssuper.com:8000/ip.php (无名网站)
 * ~~快代理~~(容易封IP，https://www.kuaidaili.com/)
 * ~~http://www.superfastip.com/~~(我也不知道这个网站叫什么，容易封IP)
+
+结构：
+crawl.py -> 代理爬虫
+database.py -> SQLite数据库API
+tests.py -> 代理测试器
+printer.py -> **Windows**下的彩色日志输出。
+ua1.txt -> UserAgent列表
+config.ini -> 配置文件
+config.py -> 配置处理文件
+
+config.ini说明：
+`
+[test]
+url=http://httpbin.org/get #测试用的URL
+method=future              #测试用方法，future或no（单线程）
+threads=40                 #测试线程数
+cycle=20                   #循环等待时间
+timeout=5                  #超时时间
+completion=1               #自动补足开关，仅在爬取器关闭时可用
+completion_thowsold=5000   #自动补足阈值
+open=1                     #开关
+[crawler]                  
+checkmax=1                 #池子大小限制开关        
+maxvalue=60000             #最大限制
+cycle=30                   #执行间隔
+open=1                     #开关
+[db]
+file=proxies.sqlite        #数据库文件
+refresh=0                  #是否刷新（在重启时）
+update=1                   #替换开关
+[web]
+ip=127.0.0.1               #REST API运行IP
+port=80                    #REST API运行端口
+open=1                     #开关
+`
+
+有问题开ISSUE并加个Pullrequest。
+
+运行：
+`python3 main.py`
+谢谢！！
