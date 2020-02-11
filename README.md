@@ -54,12 +54,12 @@ config.ini说明：
 [test]
 url=http://httpbin.org/get #测试用的URL  
 method=future              #测试用方法，future或no（单线程）
-threads=40                 #测试线程数  
+threads=50                 #测试线程数  
 cycle=20                   #循环等待时间  
 timeout=5                  #超时时间  
-completion=1               #自动补足开关，仅在爬取器关闭时可用 
+completion=0               #自动补足开关，仅在爬取器关闭时可用 
 completion_thowsold=5000   #自动补足阈值  
-open=1                     #开关  
+open=0                     #开关  
 [crawler]                    
 checkmax=1                 #池子大小限制开关      
 maxvalue=60000             #最大限制  
@@ -69,12 +69,20 @@ open=1                     #开关
 file=proxies.sqlite        #数据库文件  
 refresh=0                  #是否刷新（在重启时）  
 update=1                   #替换开关 
-[web]  <br>
+[web]
 ip=127.0.0.1               #REST API运行IP  
 port=80                    #REST API运行端口  
 open=1                     #开关  
 ```
 
-有问题开请反馈issue。
+有问题请反馈issue。
 
 运行`python3 main.py`启动主程序。
+
+更新记录：
+***2020-2-10***
+    创建存储库。
+***2020-2-11***
+    更新了README.md。
+    更新了数据库驱动，让数据库可正常处理。
+    
