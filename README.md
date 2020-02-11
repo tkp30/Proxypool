@@ -39,7 +39,8 @@ config.ini -> 配置文件
 config.py -> 配置处理文件
 
 config.ini说明：
-`
+` 
+
 [test]
 url=http://httpbin.org/get #测试用的URL
 method=future              #测试用方法，future或no（单线程）
@@ -64,8 +65,6 @@ port=80                    #REST API运行端口
 open=1                     #开关
 `
 
-有问题开ISSUE并加个Pullrequest。
+有问题开请反馈issue。
 
-运行：
-`python3 main.py`
-谢谢！！
+运行`python3 main.py`启动主程序。
