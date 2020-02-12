@@ -1,13 +1,13 @@
 ```
-  ______    ______
- |_    _|  | ____ \     
-   |  |    | |__| |   
-   |  |    | _____/
- __|  |__  | |
- |______|  |_|
+              ______    ______
+             |_    _|  | ____ \     
+               |  |    | |__| |   
+               |  |    | _____/
+             __|  |__  | |
+             |______|  |_|
 
-    免费代理池
-  Free Proxy Pool
+                 免费代理池
+              Free Proxy Pool
 ```
 # Proxypool
 ### Python免费代理池。
@@ -25,7 +25,7 @@
 
 目前爬取网站有：
 * 89IP (http://89ip.cn/)
-* 西刺代理（会封IP 503，建议不要使用。停用方法：打开crawl.py把crawl_xici换成ncrawl_xici，不好用的我都注释上了，http://xicidaili.com/ ）
+* 西刺代理（http://xicidaili.com/ ）
 * http://ip.yqie.com (我也不知道这个网站叫什么）
 * 西拉代理(http://xiladaili.com/)
 * 泥马代理(http://nimadaili.com/)
@@ -37,17 +37,17 @@
 * 飞蚁代理(很隐蔽，直接贴代理列表吧：http://www.feiyiproxy.com/?page_id=1457 )
 * LASSIN的编程实验室(https://lab.crossincode.com/)
 * http://ip.syssuper.com:8000/ip.php (无名网站)
-* ~~快代理~~(容易封IP，https://www.kuaidaili.com/)
-* ~~http://www.superfastip.com/~~(我也不知道这个网站叫什么，容易封IP)
+* 快代理(https://www.kuaidaili.com/)
+* 极速代理(http://www.superfastip.com/)
 
-结构：
-crawl.py -> 代理爬虫
-database.py -> SQLite数据库API
-tests.py -> 代理测试器
-printer.py -> **Windows**下的彩色日志输出。
-ua1.txt -> UserAgent列表
-config.ini -> 配置文件
-config.py -> 配置处理文件
+结构：<br />
+crawl.py -> 代理爬虫<br />
+database.py -> SQLite数据库API<br />
+tests.py -> 代理测试器<br />
+printer.py -> **Windows**下的彩色日志输出。<br />
+ua1.txt -> UserAgent列表<br />
+config.ini -> 配置文件<br />
+config.py -> 配置处理文件<br />
 
 config.ini说明：
 ```
@@ -74,15 +74,17 @@ ip=127.0.0.1               #REST API运行IP
 port=80                    #REST API运行端口  
 open=1                     #开关  
 ```
-
 有问题请反馈issue。
 
 运行`python3 main.py`启动主程序。
 
-更新记录：
-***2020-2-10***
-    创建存储库。
-***2020-2-11***
-    更新了README.md。
-    更新了数据库驱动，让数据库可正常处理。
+更新记录：<br />
+***2020-2-10***<br />
+    创建存储库。<br />
+***2020-2-11***<br />
+    更新了README.md。<br />
+    更新了数据库驱动，让数据库可正常处理。<br />
+***2020-2-12***<br />
+    更新了README.md。<br />
+    更新了WebAPI和爬取器，重新启用了被弃用的两个网站。<br />
     
