@@ -6,7 +6,7 @@ app=flask.Flask("ProxyPool",static_url_path="/static",static_folder='statics',)
 db=DB()
 @app.route("/")
 def api_index():
-    return '''<h2>Welcome to Proxy pool System</h2>\n<h4>There is the REST API:</h4>\n<p><a href="/api/random">Random</a></p>\n<p><a href="/api/all">All</a></p>\n<p><a href="/api/count">Count</a></p>'''
+    return '''<h2>Welcome to Proxy pool System</h2>\n<h4>There is the REST API:</h4>\n<p><a href="/api/random">Random</a></p>\n<p><a href="/api/all">All</a></p>\n<p><a href="/api/count">Count</a></p><p><a href="/api/tqdl?limit=30">Extract</a></p>'''
 @app.route("/api/random")
 def get():
     choice=random.choice(db.getall())
