@@ -66,7 +66,7 @@ class Crawler(object,metaclass=ProxyMetaclass):
                 port=[x.strip("<td>").strip("</td>") for x in re.findall("<td>\d+</td>",page,re.S)]
                 for x in zip(ip,port):
                     yield ":".join(x)
-    def crawl_xici(self): #容易503
+    def crawl_xici(self):
         urls2=["https://www.xicidaili.com/nn/{}","https://www.xicidaili.com/nt/{}","https://www.xicidaili.com/nt/{}","https://www.xicidaili.com/wt/{}","https://www.xicidaili.com/qq/{}"]
         for urI in urls2:
             urls=[urI.format(x) for x in range(1,201)]
@@ -78,18 +78,20 @@ class Crawler(object,metaclass=ProxyMetaclass):
                 for x in zip(ip,port):
                     yield ":".join(x)
                 time.sleep(2)
-    def ncrawl_kuaidaili(self): #会封IP，建议不要用在大规模抓取
-        url="https://www.kuaidaili.com/free/inha/{}/"
-        urls=[url.format(page) for page in range(1,50)]
-        for url in urls:
-            printSkyBlue("[获取器] 正在爬取"+url)
-            page=get_page(url)
-            if page:
-                bs=BeautifulSoup(page,"html.parser")
-                ip=[str(x).strip('<td data-title="IP">').strip("</td>") for x in bs.find_all("td",attrs={"data-title":"IP"})]
-                port=[str(x).strip('<td data-title="PORT">').strip("</td>") for x in bs.find_all("td",attrs={"data-title":"PORT"})]
-                for x in zip(ip,port):
-                    yield ":".join(x)
+    def crawl_kuaidaili(self):
+        urls2=["https://www.kuaidaili.com/free/inha/{}/","https://www.kuaidaili.com/free/intr/{}/"]
+        for url in urls2:
+            urls=[url.format(page) for page in range(1,50)]
+            for url in urls:
+                printSkyBlue("[获取器] 正在爬取"+url)
+                page=get_page(url)
+                if page:
+                    bs=BeautifulSoup(page,"html.parser")
+                    ip=[str(x).strip('<td data-title="IP">').strip("</td>") for x in bs.find_all("td",attrs={"data-title":"IP"})]
+                    port=[str(x).strip('<td data-title="PORT">').strip("</td>") for x in bs.find_all("td",attrs={"data-title":"PORT"})]
+                    for x in zip(ip,port):
+                        yield ":".join(x)
+                time.sleep(3)
 
     def crawl_yqie(self):
         url="http://ip.yqie.com/ipproxy.htm"
@@ -144,7 +146,7 @@ class Crawler(object,metaclass=ProxyMetaclass):
                 port=[x.strip("<td>").strip("</td>") for x in re.findall("<td>\d+</td>",page)]
                 for x in zip(ip,port):
                     yield ":".join(x)
-    def ncrawl_spfs(self): #已失效
+    def crawl_spfs(self):
         url="http://www.superfastip.com/welcome/freeip/{}"
         urls=[url.format(x) for x in range(1,11)]
         for url in urls:
@@ -155,6 +157,7 @@ class Crawler(object,metaclass=ProxyMetaclass):
                 port=[x.strip("<td>").strip("</td>") for x in re.findall("<td>\d+</td>",page)]
                 for x in zip(ip,port):
                     yield ":".join(x)
+            time.sleep(5)
     def crawl_31f(self):
         urls=["http://31f.cn/https-proxy/","http://31f.cn/http-proxy/"]
         for url in urls:
