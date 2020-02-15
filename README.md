@@ -31,7 +31,7 @@
 * 泥马代理(http://nimadaili.com/)
 * 旗云代理(http://7yip.com/)
 * http://wndaili.com (我也不知道这个网站叫什么)
-* 三一代理(http://31f.cn)
+* ~~三一代理~~(http://31f.cn)(网站已关闭）
 * 云代理(http://www.ip3366.net/)
 * www.thebigproxylist.com （无名网站)
 * 飞蚁代理(很隐蔽，直接贴代理列表吧：http://www.feiyiproxy.com/?page_id=1457 )
@@ -39,6 +39,7 @@
 * http://ip.syssuper.com:8000/ip.php (无名网站)
 * 快代理(https://www.kuaidaili.com/)
 * 极速代理(http://www.superfastip.com/)
+* 66IP(http://66ip.cn)
 
 结构：<br />
 crawl.py -> 代理爬虫<br />
@@ -87,4 +88,6 @@ open=1                     #开关
 ***2020-2-12***<br />
     更新了README.md。<br />
     更新了WebAPI和爬取器，重新启用了被弃用的两个网站。<br />
-    
+***2020-2-15***<br />
+    更新了README.md。<br />
+    更新了爬取器，弃用一个网站，启用一个网站。<br />
