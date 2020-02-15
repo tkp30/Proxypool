@@ -158,7 +158,7 @@ class Crawler(object,metaclass=ProxyMetaclass):
                 for x in zip(ip,port):
                     yield ":".join(x)
             time.sleep(5)
-    def crawl_31f(self):
+    def ncrawl_31f(self): #网站关闭
         urls=["http://31f.cn/https-proxy/","http://31f.cn/http-proxy/"]
         for url in urls:
             printSkyBlue("[获取器] 正在爬取"+url)
@@ -215,6 +215,12 @@ class Crawler(object,metaclass=ProxyMetaclass):
             coms=re.findall(r"\w+\.yunip168\.com",page)
             ip+=[getip(x) for x in coms]
             yield from [x+":80" for x in ip]
+    def crawl_daili66(self):
+        url="http://www.66ip.cn/mo.php?sxb=&tqsl=1000&port=&export=&ktip=&sxa=&submit=%CC%E1++%C8%A1&textarea=http%3A%2F%2Fwww.66ip.cn%2F%3Fsxb%3D%26tqsl%3D1000%26ports%255B%255D2%3D%26ktip%3D%26sxa%3D%26radio%3Dradio"
+        printSkyBlue("[获取器] 正在爬取"+url)
+        page=get_page(url)
+        if page:
+            yield from re.findall(r"\d+\.\d+\.\d+\.\d+\:\d+",page)
     def run(self):
         db=DB()
         warning("[获取器] 开始执行爬虫")
