@@ -13,6 +13,9 @@
 ### Python免费代理池。
 > 走过路过给个star......
 
+
+> **WARNING:如果需要fork，请至少做出一些更改！！！**
+
 依赖包：
 * Flask
 * requests
