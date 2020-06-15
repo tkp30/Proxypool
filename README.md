@@ -16,7 +16,11 @@
 
 > **WARNING:如果需要fork，请至少做出一些更改！！！**
 
-***作者最近非常忙，暂时无法维护。如果有人想要参与这个项目，欢迎联系。Email:572747232@qq.com***
+***
+⚠    声明：
+受限于环境问题，作者无法将所有主流数据库全部写上驱动。如有热心网友手头有环境的，请帮忙按照database.py的格式写一份数据库驱动。
+如果写好了，请联系572747232@qq.com，将代码以附件形式发送，来信请注明Proxypool Database。
+***
 
 依赖包：
 * Flask
@@ -31,7 +35,7 @@
 目前爬取网站有：
 * 89IP (http://89ip.cn/)
 * 西刺代理（http://xicidaili.com/ ）
-* http://ip.yqie.com (我也不知道这个网站叫什么）
+* YQIE代理 (http://ip.yqie.com） **⚠    警告：此网站改版，正逐步修改代码中，请慎重使用。**
 * 西拉代理(http://xiladaili.com/)
 * 泥马代理(http://nimadaili.com/)
 * 旗云代理(http://7yip.com/)
@@ -42,7 +46,7 @@
 * 飞蚁代理(很隐蔽，直接贴代理列表吧：http://www.feiyiproxy.com/?page_id=1457 )
 * LASSIN的编程实验室(https://lab.crossincode.com/)
 * 快代理(https://www.kuaidaili.com/)
-* 极速代理(http://www.superfastip.com/)
+* 极速代理(http://www.superfastip.com/) **⚠    警告：此网站改版，正逐步修改代码中，请慎重使用。**
 * 66IP(http://66ip.cn)
 
 结构：<br />
@@ -98,6 +102,6 @@ pip install -r requirements.txt
     更新了爬取器，弃用一个网站，启用一个网站。<br />
 ***2020-3-13***<br />
     更新爬取器和调度器，重新启动三一代理，删除了一些多余的东西，并改用多进程。
-    增加requirements.txt
+    增加requirements.txt<br />
 ***2020-4-19***<br />
     预告：将增加对MongoDB的支持。如果您想兼容其他数据库，可以分叉这个存储库，在分叉中做修改，我会考虑加入到主存储库里。    
