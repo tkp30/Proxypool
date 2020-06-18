@@ -104,4 +104,6 @@ pip install -r requirements.txt
     更新爬取器和调度器，重新启动三一代理，删除了一些多余的东西，并改用多进程。
     增加requirements.txt<br />
 ***2020-4-19***<br />
-    预告：将增加对MongoDB的支持。如果您想兼容其他数据库，可以分叉这个存储库，在分叉中做修改，我会考虑加入到主存储库里。    
+    预告：将增加对MongoDB的支持。如果您想兼容其他数据库，可以分叉这个存储库，在分叉中做修改，我会考虑加入到主存储库里。<br />
+***2020-6-18***<br />
+    MongoDB支持已添加，位于Mongo分支中。需要使用MongoDB驱动的网友们可以将config.ini,database.py替换为Mongo分支中的config.ini和database.py。<br />
