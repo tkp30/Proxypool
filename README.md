@@ -13,13 +13,12 @@
 ### Python免费代理池。
 > 走过路过给个star......
 
-
-> **WARNING:如果需要fork，请至少做出一些更改！！！**
-
 ***
 ⚠    声明：
 受限于环境问题，作者无法将所有主流数据库全部写上驱动。如有热心网友手头有环境的，请帮忙按照database.py的格式写一份数据库驱动。
 如果写好了，请联系572747232@qq.com，将代码以附件形式发送，来信请注明Proxypool Database。
+
+编写不易，如果需要fork，请***至少做出一些更改！！！***
 ***
 
 依赖包：
@@ -35,19 +34,21 @@
 目前爬取网站有：
 * 89IP (http://89ip.cn/)
 * 西刺代理（http://xicidaili.com/ ）
-* YQIE代理 (http://ip.yqie.com） **⚠    警告：此网站改版，正逐步修改代码中，请慎重使用。**
+* YQIE代理 (http://ip.yqie.com） 
 * 西拉代理(http://xiladaili.com/)
 * 泥马代理(http://nimadaili.com/)
 * 旗云代理(http://7yip.com/)
 * http://wndaili.cn (我也不知道这个网站叫什么)
 * 三一代理(http://31f.cn)
-* 云代理(http://www.ip3366.net/)
+* 云代理(http://www.ip3366.net/) ℹ  网站增强反扒措施，即将移除
 * www.thebigproxylist.com （无名网站)
-* 飞蚁代理(很隐蔽，直接贴代理列表吧：http://www.feiyiproxy.com/?page_id=1457 )
+* ~~飞蚁代理(很隐蔽，直接贴代理列表吧：http://www.feiyiproxy.com/?page_id=1457 ) 网站改版已失效 ~~
 * LASSIN的编程实验室(https://lab.crossincode.com/)
 * 快代理(https://www.kuaidaili.com/)
-* 极速代理(http://www.superfastip.com/) **⚠    警告：此网站改版，正逐步修改代码中，请慎重使用。**
+* 极速代理(http://www.superfastip.com/)
 * 66IP(http://66ip.cn)
+* 开心代理(http://kxdaili.com)
+* 高可用全球代理IP库(https://ip.jiangxianli.com/)
 
 结构：<br />
 crawl.py -> 代理爬虫<br />
@@ -107,3 +108,5 @@ pip install -r requirements.txt
     预告：将增加对MongoDB的支持。如果您想兼容其他数据库，可以分叉这个存储库，在分叉中做修改，我会考虑加入到主存储库里。<br />
 ***2020-6-18***<br />
     MongoDB支持已添加，位于Mongo分支中。需要使用MongoDB驱动的网友们可以将config.ini,database.py替换为Mongo分支中的config.ini和database.py。<br />
+***2020-6-20***<br />
+    应网站改版，停用或修改部分爬虫，结构回退（因爬取器多线程跑太快有一定概率烧网卡【滑稽】）<br />
