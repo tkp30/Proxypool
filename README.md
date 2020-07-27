@@ -42,7 +42,6 @@
 * 三一代理(http://31f.cn)
 * 云代理(http://www.ip3366.net/) ℹ  网站增强反扒措施，即将移除
 * www.thebigproxylist.com （无名网站)
-* ~~飞蚁代理(很隐蔽，直接贴代理列表吧：http://www.feiyiproxy.com/?page_id=1457 ) 网站改版已失效 ~~
 * LASSIN的编程实验室(https://lab.crossincode.com/)
 * 快代理(https://www.kuaidaili.com/)
 * 极速代理(http://www.superfastip.com/)
