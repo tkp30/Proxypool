@@ -10,6 +10,8 @@
 ### Python免费代理池。
 > 走过路过给个star......
 
+[![Run on Repl.it](https://repl.it/badge/github/XHG78999/Proxypool)](https://repl.it/github/XHG78999/Proxypool)
+
 ***
 ⚠    声明：
 受限于环境问题，作者无法将所有主流数据库全部写上驱动。如有热心网友手头有环境的，请帮忙按照database.py的格式写一份数据库驱动。
