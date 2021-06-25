@@ -10,6 +10,8 @@
 ### Python免费代理池。
 > 走过路过给个star......
 
+***作者很忙，暂时停更***
+
 [![Run on Repl.it](https://repl.it/badge/github/XHG78999/Proxypool)](https://repl.it/github/XHG78999/Proxypool)
 
 ***
